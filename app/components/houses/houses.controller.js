@@ -2,7 +2,7 @@
 
 angular
     .module('characters')
-    .controller('charactersController', charactersController);
+    .controller('housesController', housesController);
 
 housesController.$inject = ['httpService'];
 
