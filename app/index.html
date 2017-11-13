@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <title>Ice and Fire</title>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="app.css" />
+        <link rel="stylesheet" href="app.animations.css" />
+
+    </head>
+    <body>
+
+        <div>
+            <navigation></navigation>
+        </div>
+
+        <div class="view-container">
+            <div ng-view class="view-frame"></div>
+        </div>
+
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="app.module.js"></script>
+        <script src="app.config.js"></script>
+        <script src="filters/array.filter.js"></script>
+        <script src="filters/url.filter.js"></script>
+        <script src="components/navigation/navigation.module.js"></script>
+        <script src="components/navigation/navigation.component.js"></script>
+        <script src="components/books/books.module.js"></script>
+        <script src="components/books/books.service.js"></script>
+        <script src="components/books/books.component.js"></script>
+        <script src="components/characters/characters.module.js"></script>
+        <script src="components/characters/characters.service.js"></script>
+        <script src="components/characters/characters.component.js"></script>
+        <script src="components/houses/houses.module.js"></script>
+        <script src="components/houses/houses.service.js"></script>
+        <script src="components/houses/houses.component.js"></script>
+        <script src="components/book-item/book-item.module.js"></script>
+        <script src="components/book-item/book-item.service.js"></script>
+        <script src="components/book-item/book-item.component.js"></script>
+        <script src="components/character-item/character-item.module.js"></script>
+        <script src="components/character-item/character-item.service.js"></script>
+        <script src="components/character-item/character-item.component.js"></script>
+        <script src="components/house-item/house-item.module.js"></script>
+        <script src="components/house-item/house-item.service.js"></script>
+        <script src="components/house-item/house-item.component.js"></script>
+
+    </body>
+</html>

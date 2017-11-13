@@ -1,0 +1,18 @@
+<div>
+
+    <h1>{{vm.name}}</h1>
+    <p> <b>Region: </b> {{vm.region}} </p>
+    <p> <b>Coat of arms: </b> {{vm.coatOfArms}}</p>
+    <p> <b>Words: </b> {{vm.words}} </p>
+    <p> <b>Titles: </b> {{vm.titles | formatArray}} </p>
+    <p> <b>Seats: </b> {{vm.seats | formatArray}} </p>
+    <p> <a href="{{vm.currentLord | formatUrl: '/characters'}}"> Current lord</a>  </p>
+    <p> <a href="{{vm.heir | formatUrl: '/characters'}}">Heir </a> </p>
+    <p> <a href="{{vm.overlord | formatUrl: '/characters'}}">Overlord </a> </p>
+    <p> <b>Founded: </b> {{vm.founded}} </p>
+    <p> <b>Founder: </b> {{vm.founder}} </p>
+    <p> <b>Died out: </b> {{vm.diedOut}} </p>
+    <p> <b>Ancestral weapons: </b> {{vm.ancestralWeapons | formatArray}} </p>
+    <p> <b>Cadet branches: </b> {{vm.cadetBranches | formatArray}} </p>
+
+</div>

@@ -1,0 +1,25 @@
+<div>
+
+    <h1>{{vm.name}}</h1>
+    <p> <b>Titles: </b> {{vm.titles | formatArray: ', '}} </p>
+    <p> <b>Born: </b> {{vm.born}}<b> died: </b> {{vm.died}} </p>
+    <p> <b>Culture: </b> {{vm.culture}} </p>
+    <p> <b>Gender: </b> {{vm.gender}} </p>
+
+    <dl>
+        <dt>Aliases:</dt>
+        <dd ng-repeat="alias in vm.aliases">{{alias}}</dd>
+    </dl>
+
+    <p> <b>Father: </b> {{vm.father}} </p>
+    <p> <b>Mother: </b> {{vm.mother}} </p>
+    <p> <b>Spouse: </b> {{vm.spouse}} </p>
+
+    <p>
+        <b>Allegiances to </b>
+        <a href="{{vm.allegiances[0] | formatUrl: '/houses'}}">home</a>
+    </p>
+
+    <p> <b>In tv series: </b> {{vm.tvSeries | formatArray}} </p>
+    <p> <b>Played by: </b> {{vm.playedBy | formatArray}} </p>
+</div>

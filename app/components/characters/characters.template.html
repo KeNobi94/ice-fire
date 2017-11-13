@@ -1,0 +1,12 @@
+<h1>Characters</h1>
+
+<div>
+
+    <div ng-repeat="character in vm.characters" class="list-item list-group">
+        <a href="{{character.url | formatUrl}}" class="list-group-item">
+            <h4>{{character.aliases | formatArray}}</h4>
+            <p> <b>played by: </b>{{character.playedBy | formatArray}} </p>
+        </a>
+    </div>
+
+</div>

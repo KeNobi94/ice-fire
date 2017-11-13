@@ -1,0 +1,12 @@
+<h1>Houses</h1>
+
+<div>
+
+    <div ng-repeat="house in vm.houses" class="list-item list-group">
+        <a href="{{house.url | formatUrl}}" class="list-group-item">
+            <h4>{{house.name}}</h4>
+            <p> <b>Coat of arms: </b>{{house.coatOfArms}} </p>
+        </a>
+    </div>
+
+</div>

@@ -1,0 +1,12 @@
+<div>
+
+    <h1>{{vm.name}}</h1>
+    <p><b>Uniq ID: </b> {{vm.isbn}}</p>
+    <p><b>Authors: </b> {{vm.authors | formatArray: ', '}}</p>
+    <p><b>Number of pages: </b> {{vm.numberOfPages}}</p>
+    <p><b>Publisher: </b> {{vm.publisher}}</p>
+    <p><b>Country: </b> {{vm.country}}</p>
+    <p><b>Media type: </b> {{vm.mediaType}}</p>
+    <p><b>Released: </b> {{vm.released | date: 'dd.MM.yyyy'}}</p>
+
+</div>
