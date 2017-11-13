@@ -8,15 +8,16 @@ angular
         controllerAs: 'vm'
     });
 
-houseItemController.$inject = ['houseItemService'];
+houseItemController.$inject = ['httpService'];
 
-function houseItemController(houseItemService) {
-    var vm = this;
+function houseItemController(httpService) {
+    let vm = this,
+        url = 'https://anapioficeandfire.com/api/houses';
 
-    houseItemService
-        .getData()
-        .then(function(data) {
-            var key;
+    httpService
+        .getData(url)
+        .then((data) => {
+            let key;
             for (key in data) { vm[key] = data[key]; }
         });
 }

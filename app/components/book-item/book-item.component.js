@@ -8,15 +8,16 @@ angular
         controllerAs: 'vm'
     });
 
-bookItemController.$inject = ['bookItemService'];
+bookItemController.$inject = ['httpService'];
 
-function bookItemController(bookItemService) {
-    var vm = this;
+function bookItemController(httpService) {
+    let vm = this,
+        url = 'https://anapioficeandfire.com/api/books';
 
-    bookItemService
-        .getData()
-        .then(function(data) {
-            var key;
+    httpService
+        .getData(url)
+        .then((data) => {
+            let key;
             for (key in data) { vm[key] = data[key]; }
         });
 

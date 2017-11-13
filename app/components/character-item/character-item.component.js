@@ -8,15 +8,16 @@ angular
         controllerAs: 'vm'
     });
 
-characterItemController.$inject = ['characterItemService'];
+characterItemController.$inject = ['httpService'];
 
-function characterItemController(characterItemService) {
-    var vm = this;
+function characterItemController(httpService) {
+    let vm = this,
+        url = 'https://anapioficeandfire.com/api/characters';
 
-    characterItemService
-        .getData()
-        .then(function(data) {
-            var key;
+    httpService
+        .getData(url)
+        .then((data) => {
+            let key;
             for (key in data) { vm[key] = data[key]; }
         });
 }

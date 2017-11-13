@@ -8,14 +8,13 @@ angular
         controllerAs: 'vm'
     });
 
-booksController.$inject = ['booksService'];
+booksController.$inject = ['httpService'];
 
-function booksController(booksService) {
-    var vm = this;
+function booksController(httpService) {
+    let vm = this,
+        url = 'https://anapioficeandfire.com/api/books';
 
-    booksService
-        .getBooks()
-        .then(function (data) {
-            vm.books = data;
-        });
+    httpService
+        .getData(url)
+        .then((data) => { vm.books = data; });
 }

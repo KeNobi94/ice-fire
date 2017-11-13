@@ -8,12 +8,13 @@ angular
         controllerAs: 'vm'
     });
 
-housesController.$inject = ['housesService'];
+housesController.$inject = ['httpService'];
 
-function housesController(housesService) {
-    var vm = this;
+function housesController(httpService) {
+    let vm = this,
+        url = 'https://anapioficeandfire.com/api/houses';
 
-    housesService
-        .getHouses()
-        .then(function(data) { vm.houses = data; });
+    httpService
+        .getData(url)
+        .then((data) => { vm.houses = data; });
 }
